@@ -3,9 +3,10 @@ package ahlers.b2
 import cats.syntax.option._
 import org.scalacheck._
 import org.scalamock.scalatest._
-import org.scalatest.Matchers._
+import matchers.should.Matchers._
 import org.scalatest.flatspec._
 import org.scalatestplus.scalacheck._
+import org.scalatest.matchers
 
 /**
  * @author <a href="mailto:michael@ahlers.consulting">Michael Ahlers</a>

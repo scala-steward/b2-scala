@@ -6,6 +6,8 @@ import org.scalamock.scalatest._
 import matchers.should.Matchers._
 import org.scalatest.flatspec._
 import org.scalatest._
+import org.scalatest.matchers.should.Matchers._
+import org.scalatest.wordspec._
 import org.scalatestplus.scalacheck._
 import org.scalatest.matchers
 

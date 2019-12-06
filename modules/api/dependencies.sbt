@@ -4,5 +4,5 @@ libraryDependencies ++=
     Nil
 
 libraryDependencies ++=
-  "com.typesafe.play" %% "play-json" % "2.7.4" % Test ::
+  "com.typesafe.play" %% "play-json" % "2.8.0" % Test ::
     Nil

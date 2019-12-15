@@ -1,5 +1,5 @@
 libraryDependencies ++=
-  "com.beachape" %% "enumeratum" % "1.5.13" ::
+  "com.beachape" %% "enumeratum" % "1.5.14" ::
     //"io.lemonlabs" %% "scala-uri" % "1.4.10" ::
     Nil
 

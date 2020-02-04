@@ -11,7 +11,7 @@ ThisBuild / libraryDependencies ++=
 
 ThisBuild / libraryDependencies ++=
   "com.softwaremill.diffx" %% "diffx-scalatest" % "0.3.12" % Test ::
-    "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % "1.2.3" % Test ::
+    "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % "1.2.4" % Test ::
     "org.typelevel" %% "cats-laws" % "2.0.0" % Test ::
     "org.typelevel" %% "cats-testkit" % "2.0.0" % Test ::
     "org.scalacheck" %% "scalacheck" % "1.14.2" % Test ::

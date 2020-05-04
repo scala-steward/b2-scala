@@ -1,8 +1,10 @@
 package ahlers.b2
 
 import cats.syntax.option._
+import com.softwaremill.diffx.scalatest.DiffMatcher._
 import org.scalacheck._
 import org.scalamock.scalatest._
+import org.scalatest.OptionValues._
 import org.scalatest._
 import org.scalatest.matchers.should.Matchers._
 import org.scalatest.wordspec._
@@ -56,23 +58,38 @@ class CredentialSpec extends AnyWordSpec with MockFactory {
       import ScalacheckShapeless._
 
       forAll(choose(0, 3), arbitrary[Credential], choose(0, 3)) { (heads, credential, tails) =>
-        val providers: Seq[Provider] = {
-          (Seq.fill(heads) {
-            val p = mock[Provider]
-            (p.find _).expects().once().returns(none)
-            p
-          } :+ {
-            val p = mock[Provider]
-            (p.find _).expects().once().returns(credential.some)
-            p
-          }) ++ Seq.fill(tails) {
-            val p = mock[Provider]
-            (p.find _).expects().never()
-            p
-          }
-        }
+        val providers = Seq.fill(heads + 1 + tails)(mock[Provider])
 
-        (providers reduce { _ | _ }).find() should contain(credential)
+        providers
+          .take(heads)
+          .foreach(p =>
+            (p.find _)
+              .expects()
+              .once()
+              .returns(none))
+
+        providers
+          .drop(heads)
+          .take(1)
+          .foreach(p =>
+            (p.find _)
+              .expects()
+              .once()
+              .returns(credential.some))
+
+        providers
+          .drop(heads)
+          .drop(1)
+          .foreach(p =>
+            (p.find _)
+              .expects()
+              .never())
+
+        providers
+          .reduce(_ | _)
+          .find()
+          .value
+          .should(matchTo(credential))
       }
     }
   }
@@ -80,8 +97,8 @@ class CredentialSpec extends AnyWordSpec with MockFactory {
   "Provider environment" must {
     "default to system" in {
       import Credential._
-      import Provider._
       import Inside._
+      import Provider._
 
       inside(Provider.environment("", "")) {
         case provider: Environment =>

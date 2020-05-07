@@ -1,7 +1,7 @@
 libraryDependencies ++=
   "com.beachape" %% "enumeratum" % "1.5.13" ::
     "eu.timepit" %% "refined" % "0.9.14" ::
-    "io.estatico" %% "newtype" % "0.4.3" ::
+    "io.estatico" %% "newtype" % "0.4.4" ::
     "io.scalaland" %% "chimney" % "0.5.1" ::
     Nil
 

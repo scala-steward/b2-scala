@@ -6,7 +6,7 @@ ThisBuild / crossScalaVersions += "2.12.11"
 ThisBuild / libraryDependencies ++=
   "com.github.pathikrit" %% "better-files" % "3.8.0" ::
     "org.typelevel" %% "cats-core" % "2.1.1" ::
-    "org.scalactic" %% "scalactic" % "3.1.0" ::
+    "org.scalactic" %% "scalactic" % "3.1.2" ::
     Nil
 
 ThisBuild / libraryDependencies ++=

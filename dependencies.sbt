@@ -4,7 +4,7 @@ ThisBuild / crossScalaVersions += "2.12.11"
 /* TODO: Set Cats release version. */
 
 ThisBuild / libraryDependencies ++=
-  "com.github.pathikrit" %% "better-files" % "3.8.0" ::
+  "com.github.pathikrit" %% "better-files" % "3.9.0" ::
     "org.typelevel" %% "cats-core" % "2.1.1" ::
     "org.scalactic" %% "scalactic" % "3.1.0" ::
     Nil

@@ -16,7 +16,7 @@ ThisBuild / libraryDependencies ++=
     "org.typelevel" %% "cats-testkit" % "2.1.1" % Test ::
     "org.scalacheck" %% "scalacheck" % "1.14.2" % Test ::
     "org.scalamock" %% "scalamock" % "4.4.0" % Test ::
-    "org.scalatest" %% "scalatest" % "3.1.0" % Test ::
+    "org.scalatest" %% "scalatest" % "3.1.3" % Test ::
     "org.scalatestplus" %% "scalatestplus-scalacheck" % "1.0.0-M2" % Test ::
     Nil
 

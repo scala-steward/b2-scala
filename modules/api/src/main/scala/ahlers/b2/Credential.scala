@@ -1,7 +1,6 @@
 package ahlers.b2
 
 import cats.data._
-import cats.instances.option._
 import cats.syntax.apply._
 import cats.syntax.foldable._
 import cats.syntax.option._

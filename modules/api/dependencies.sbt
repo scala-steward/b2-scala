@@ -6,7 +6,7 @@ libraryDependencies ++=
     Nil
 
 libraryDependencies ++=
-  "com.typesafe.play" %% "play-json" % "2.7.4" % Test ::
+  "com.typesafe.play" %% "play-json" % "2.9.2" % Test ::
     "eu.timepit" %% "refined-scalacheck" % "0.9.14" % Test ::
     "eu.timepit" %% "refined-shapeless" % "0.9.14" % Test ::
     Nil
